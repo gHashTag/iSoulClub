@@ -17,16 +17,28 @@ import Accordion from 'react-native-collapsible/Accordion';
 const SECTIONS = [
   {
     title: 'First',
-    content: 'Lorem ipsum...',
+    content: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Qui in tempore blanditiis maxime odio deleniti explicabo ipsa quidem pariatur quibusdam cum voluptate dolores, minima nesciunt harum molestias, nam quisquam facere.',
   },
   {
     title: 'Second',
-    content: 'Lorem ipsum...',
+    content: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Qui in tempore blanditiis maxime odio deleniti explicabo ipsa quidem pariatur quibusdam cum voluptate dolores, minima nesciunt harum molestias, nam quisquam facere.',
   },
   {
     title: 'Third',
-    content: 'Lorem ipsum...',
-  }
+    content: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Qui in tempore blanditiis maxime odio deleniti explicabo ipsa quidem pariatur quibusdam cum voluptate dolores, minima nesciunt harum molestias, nam quisquam facere.',
+  },
+  {
+    title: ' Fourth',
+    content: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Qui in tempore blanditiis maxime odio deleniti explicabo ipsa quidem pariatur quibusdam cum voluptate dolores, minima nesciunt harum molestias, nam quisquam facere.',
+  },
+  {
+    title: 'Fifth',
+    content: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Qui in tempore blanditiis maxime odio deleniti explicabo ipsa quidem pariatur quibusdam cum voluptate dolores, minima nesciunt harum molestias, nam quisquam facere.',
+  },
+  {
+    title: 'Sixth',
+    content: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Qui in tempore blanditiis maxime odio deleniti explicabo ipsa quidem pariatur quibusdam cum voluptate dolores, minima nesciunt harum molestias, nam quisquam facere.',
+  },
 ];
 
 
@@ -42,28 +54,28 @@ class iSoulClub extends Component {
 
   _renderContent(section) {
     return (
-      <View style={styles.content}>
         <Text>{section.content}</Text>
-      </View>
     );
   }
 
   render() {
     return (
-      <Accordion
-        sections={SECTIONS}
-        renderHeader={this._renderHeader}
-        renderContent={this._renderContent}
-      />
+      <View style={styles.content}>
+        <Accordion
+          sections={SECTIONS}
+          renderHeader={this._renderHeader}
+          renderContent={this._renderContent}
+        />
+      </View>
     );
   }
 }
 
 const styles = StyleSheet.create({
-  container: {
+  header: {
     flex: 1,
-    justifyContent: 'center',
     backgroundColor: '#F5FCFF',
+    //paddingTop: 'heightOfStatusBar'
   },
   title: {
     textAlign: 'center',
@@ -72,7 +84,7 @@ const styles = StyleSheet.create({
     marginBottom: 20,
   },
   header: {
-    backgroundColor: '#F5FCFF',
+    backgroundColor: '#2ca2d5',
     padding: 10,
   },
   headerText: {
