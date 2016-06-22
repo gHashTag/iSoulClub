@@ -66,6 +66,7 @@ class iSoulClub extends Component {
           renderHeader={this._renderHeader}
           renderContent={this._renderContent}
         />
+        <Image source={require('./img/logo_og.png')}  style={styles.backgroundImage}></Image>
       </View>
     );
   }
@@ -75,7 +76,6 @@ const styles = StyleSheet.create({
   header: {
     flex: 1,
     backgroundColor: '#F5FCFF',
-    //paddingTop: 'heightOfStatusBar'
   },
   title: {
     textAlign: 'center',
@@ -94,15 +94,13 @@ const styles = StyleSheet.create({
   },
   content: {
     flex: 1,
-    padding: 20,
+    paddingTop: 30,
     backgroundColor: '#fff',
   },
-  active: {
-    backgroundColor: 'rgba(255,255,255,1)',
-  },
-  inactive: {
-    backgroundColor: 'rgba(245,252,255,1)',
-  },
+  backgroundImage: {
+    flex: 1,
+    resizeMode: 'cover', // or 'stretch'
+  }
 });
 
 AppRegistry.registerComponent('iSoulClub', () => iSoulClub);
