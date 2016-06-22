@@ -11,22 +11,50 @@ import {
   Text,
   View
 } from 'react-native';
+import Collapsible from 'react-native-collapsible';
+import Accordion from 'react-native-collapsible/Accordion';
+
+const SECTIONS = [
+  {
+    title: 'First',
+    content: 'Lorem ipsum...',
+  },
+  {
+    title: 'Second',
+    content: 'Lorem ipsum...',
+  },
+  {
+    title: 'Third',
+    content: 'Lorem ipsum...',
+  }
+];
+
+
 
 class iSoulClub extends Component {
+  _renderHeader(section) {
+    return (
+      <View style={styles.header}>
+        <Text style={styles.headerText}>{section.title}</Text>
+      </View>
+    );
+  }
+
+  _renderContent(section) {
+    return (
+      <View style={styles.content}>
+        <Text>{section.content}</Text>
+      </View>
+    );
+  }
+
   render() {
     return (
-      <View style={styles.container}>
-        <Text style={styles.welcome}>
-          Welcome to React Native!
-        </Text>
-        <Text style={styles.instructions}>
-          To get started, edit index.ios.js
-        </Text>
-        <Text style={styles.instructions}>
-          Press Cmd+R to reload,{'\n'}
-          Cmd+D or shake for dev menu
-        </Text>
-      </View>
+      <Accordion
+        sections={SECTIONS}
+        renderHeader={this._renderHeader}
+        renderContent={this._renderContent}
+      />
     );
   }
 }
@@ -35,18 +63,33 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     justifyContent: 'center',
-    alignItems: 'center',
     backgroundColor: '#F5FCFF',
   },
-  welcome: {
-    fontSize: 20,
+  title: {
     textAlign: 'center',
-    margin: 10,
+    fontSize: 22,
+    fontWeight: '300',
+    marginBottom: 20,
   },
-  instructions: {
+  header: {
+    backgroundColor: '#F5FCFF',
+    padding: 10,
+  },
+  headerText: {
     textAlign: 'center',
-    color: '#333333',
-    marginBottom: 5,
+    fontSize: 16,
+    fontWeight: '500',
+  },
+  content: {
+    flex: 1,
+    padding: 20,
+    backgroundColor: '#fff',
+  },
+  active: {
+    backgroundColor: 'rgba(255,255,255,1)',
+  },
+  inactive: {
+    backgroundColor: 'rgba(245,252,255,1)',
   },
 });
 
