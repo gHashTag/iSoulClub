@@ -8,8 +8,10 @@ import React, { Component } from 'react';
 import {
   AppRegistry,
   StyleSheet,
+  Image,
   Text,
-  View
+  View,
+  ScrollView
 } from 'react-native';
 import Collapsible from 'react-native-collapsible';
 import Accordion from 'react-native-collapsible/Accordion';
@@ -17,7 +19,7 @@ import Accordion from 'react-native-collapsible/Accordion';
 const SECTIONS = [
   {
     title: 'First',
-    content: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Qui in tempore blanditiis maxime odio deleniti explicabo ipsa quidem pariatur quibusdam cum voluptate dolores, minima nesciunt harum molestias, nam quisquam facere.',
+    content: 'Loremm ipsum dolor sit amet, consectetur adipisicing elit. Qui in tempore blanditiis maxime odio deleniti explicabo ipsa quidem pariatur quibusdam cum voluptate dolores, minima nesciunt harum molestias, nam quisquam facere.',
   },
   {
     title: 'Second',
@@ -60,14 +62,14 @@ class iSoulClub extends Component {
 
   render() {
     return (
-      <View style={styles.content}>
+      <ScrollView style={styles.content}>
         <Accordion
           sections={SECTIONS}
           renderHeader={this._renderHeader}
           renderContent={this._renderContent}
         />
         <Image source={require('./img/logo_og.png')}  style={styles.backgroundImage}></Image>
-      </View>
+      </ScrollView>
     );
   }
 }
@@ -85,7 +87,7 @@ const styles = StyleSheet.create({
   },
   header: {
     backgroundColor: '#2ca2d5',
-    padding: 10,
+    padding: 30,
   },
   headerText: {
     textAlign: 'center',
@@ -99,7 +101,7 @@ const styles = StyleSheet.create({
   },
   backgroundImage: {
     flex: 1,
-    resizeMode: 'cover', // or 'stretch'
+    resizeMode: 'stretch'
   }
 });
 
