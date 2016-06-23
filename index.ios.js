@@ -66,10 +66,13 @@ class iSoulClub extends Component {
         <Accordion
           sections={SECTIONS}
           renderHeader={this._renderHeader}
-          renderContent={this._renderContent}
-        />
-        <Image source={require('./img/logo_og.png')}  style={styles.backgroundImage}></Image>
-      </ScrollView>
+          renderContent={this._renderContent}>
+            <Image source={require('./img/marvell.png')}/>
+          </Accordion>
+
+
+        {/*<Image source={require('./img/logo_og.png')}  style={styles.backgroundImage}></Image>
+      </ScrollView>*/}
     );
   }
 }
