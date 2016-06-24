@@ -43,7 +43,7 @@ const SECTIONS = [
 class iSoulClub extends Component {
   _renderHeader(section) {
     return (
-        <Image style={styles.backgroundImage} source={section.pic}><Text style={styles.headerText}>{section.title}</Text></Image>
+        <Image style={styles.header} source={section.pic}><Text style={styles.headerText}>{section.title}</Text></Image>
     );
   }
 
@@ -69,24 +69,21 @@ class iSoulClub extends Component {
 const styles = StyleSheet.create({
   header: {
     flex: 1,
-    padding: 30
+    padding: 30,
+    justifyContent: 'center'
   },
   headerText: {
     textAlign: 'center',
     fontSize: 30,
     alignItems: 'center',
     color: '#f9f6fb',
-    fontWeight: '500',
+    fontWeight: '200',
   },
   content: {
     flex: 1,
     paddingTop: 30,
-    backgroundColor: '#fff',
-
+    backgroundColor: '#fff'
   },
-  backgroundImage: {
-    justifyContent: 'center',
-  }
 });
 
 AppRegistry.registerComponent('iSoulClub', () => iSoulClub);
