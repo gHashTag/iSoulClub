@@ -82,10 +82,10 @@ const styles = StyleSheet.create({
     flex: 1,
     paddingTop: 30,
     backgroundColor: '#fff',
+
   },
   backgroundImage: {
-    flex: 1,
-    resizeMode: 'stretch'
+    justifyContent: 'center',
   }
 });
 
