@@ -20,26 +20,27 @@ const SECTIONS = [
   {
     title: 'First',
     content: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Qui in tempore blanditiis maxime odio deleniti explicabo ipsa quidem pariatur quibusdam cum voluptate dolores, minima nesciunt harum molestias, nam quisquam facere.',
+    pic: './img/marvell/marvell-0',
   },
   {
     title: 'Second',
     content: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Qui in tempore blanditiis maxime odio deleniti explicabo ipsa quidem pariatur quibusdam cum voluptate dolores, minima nesciunt harum molestias, nam quisquam facere.',
+    pic: './img/marvell/marvell-1',
   },
   {
     title: 'Third',
     content: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Qui in tempore blanditiis maxime odio deleniti explicabo ipsa quidem pariatur quibusdam cum voluptate dolores, minima nesciunt harum molestias, nam quisquam facere.',
+    pic: './img/marvell/marvell-2',
   },
   {
     title: ' Fourth',
     content: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Qui in tempore blanditiis maxime odio deleniti explicabo ipsa quidem pariatur quibusdam cum voluptate dolores, minima nesciunt harum molestias, nam quisquam facere.',
+    pic: './img/marvell/marvell-3',
   },
   {
     title: 'Fifth',
     content: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Qui in tempore blanditiis maxime odio deleniti explicabo ipsa quidem pariatur quibusdam cum voluptate dolores, minima nesciunt harum molestias, nam quisquam facere.',
-  },
-  {
-    title: 'Sixth',
-    content: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Qui in tempore blanditiis maxime odio deleniti explicabo ipsa quidem pariatur quibusdam cum voluptate dolores, minima nesciunt harum molestias, nam quisquam facere.',
+    pic: './img/marvell/marvell-4',
   },
 ];
 
@@ -48,9 +49,7 @@ const SECTIONS = [
 class iSoulClub extends Component {
   _renderHeader(section) {
     return (
-      <View style={styles.header}>
-        <Text style={styles.headerText}>{section.title}</Text>
-      </View>
+        <Image style={styles.backgroundImage}>{section.pic}><Text style={styles.headerText}>{section.title}</Text></Image>
     );
   }
 
@@ -68,7 +67,6 @@ class iSoulClub extends Component {
           renderHeader={this._renderHeader}
           renderContent={this._renderContent}
         />
-        <Image source={require('./img/logo_og.png')}  style={styles.backgroundImage}></Image>
       </ScrollView>
     );
   }
@@ -77,21 +75,13 @@ class iSoulClub extends Component {
 const styles = StyleSheet.create({
   header: {
     flex: 1,
-    backgroundColor: '#F5FCFF',
-  },
-  title: {
-    textAlign: 'center',
-    fontSize: 22,
-    fontWeight: '300',
-    marginBottom: 20,
-  },
-  header: {
-    backgroundColor: '#2ca2d5',
-    padding: 30,
+    backgroundColor: '#1fa6df',
+    padding: 30
   },
   headerText: {
     textAlign: 'center',
-    fontSize: 16,
+    fontSize: 30,
+    alignItems: 'center',
     fontWeight: '500',
   },
   content: {
