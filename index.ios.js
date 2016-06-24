@@ -9,6 +9,9 @@ import {
 } from 'react-native';
 import Collapsible from 'react-native-collapsible';
 import Accordion from 'react-native-collapsible/Accordion';
+import { Dimensions } from 'react-native';
+
+const { width, height } = Dimensions.get('window');
 
 const SECTIONS = [
   {
@@ -43,7 +46,9 @@ const SECTIONS = [
 class iSoulClub extends Component {
   _renderHeader(section) {
     return (
-        <Image style={styles.header} source={section.pic}><Text style={styles.headerText}>{section.title}</Text></Image>
+        <View>
+          <Image style={styles.header} resizeMode='stretch' source={section.pic}><Text style={styles.headerText}>{section.title}</Text></Image>
+        </View>
     );
   }
 
@@ -55,7 +60,7 @@ class iSoulClub extends Component {
 
   render() {
     return (
-      <ScrollView style={styles.content}>
+      <ScrollView style={styles.container}>
         <Accordion
           sections={SECTIONS}
           renderHeader={this._renderHeader}
@@ -67,28 +72,33 @@ class iSoulClub extends Component {
 }
 
 const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    paddingTop: 30,
+    backgroundColor: 'orange'
+  },
   header: {
     flex: 1,
-    padding: 30,
-    alignItems: 'stretch'
+    width: null,
+    //height: null,
+    //flexDirection: 'column',
+    //alignItems: 'stretch',
+    //backgroundColor: 'blue'
   },
   headerText: {
+    flex: 1,
     textAlign: 'center',
     fontSize: 30,
     alignItems: 'center',
     color: '#f9f6fb',
     fontWeight: '200'
   },
-  content: {
-
-    paddingTop: 30,
-    backgroundColor: '#fff',
-  },
   textContent: {
     paddingTop: 10,
     paddingLeft: 10,
     paddingRight: 10,
-    paddingBottom: 10
+    paddingBottom: 10,
+    backgroundColor: 'red'
   }
 });
 
