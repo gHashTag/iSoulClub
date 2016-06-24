@@ -49,7 +49,7 @@ class iSoulClub extends Component {
 
   _renderContent(section) {
     return (
-        <Text>{section.content}</Text>
+        <Text style={styles.textContent}>{section.content}</Text>
     );
   }
 
@@ -82,8 +82,14 @@ const styles = StyleSheet.create({
   content: {
     flex: 1,
     paddingTop: 30,
-    backgroundColor: '#fff'
+    backgroundColor: '#fff',
   },
+  textContent: {
+    paddingTop: 10,
+    paddingLeft: 10,
+    paddingRight: 10,
+    paddingBottom: 10
+  }
 });
 
 AppRegistry.registerComponent('iSoulClub', () => iSoulClub);
