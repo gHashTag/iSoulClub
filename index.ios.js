@@ -77,7 +77,7 @@ const styles = StyleSheet.create({
     fontSize: 30,
     alignItems: 'center',
     color: '#f9f6fb',
-    fontWeight: '200]
+    fontWeight: '200'
   },
   content: {
 
