@@ -42,12 +42,11 @@ const SECTIONS = [
 ];
 
 
-
 class iSoulClub extends Component {
   _renderHeader(section) {
     return (
         <View>
-          <Image style={styles.header} resizeMode='stretch' source={section.pic}><Text style={styles.headerText}>{section.title}</Text></Image>
+          <Image style={styles.header} style={{flex: 1}} resizeMode='stretch' source={section.pic}><Text style={styles.headerText}>{section.title}</Text></Image>
         </View>
     );
   }
@@ -81,7 +80,7 @@ const styles = StyleSheet.create({
     flex: 1,
     width: null,
     //height: null,
-    //flexDirection: 'column',
+    flexDirection: 'column',
     //alignItems: 'stretch',
     //backgroundColor: 'blue'
   },
