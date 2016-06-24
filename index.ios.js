@@ -70,17 +70,17 @@ const styles = StyleSheet.create({
   header: {
     flex: 1,
     padding: 30,
-    justifyContent: 'center'
+    alignItems: 'stretch'
   },
   headerText: {
     textAlign: 'center',
     fontSize: 30,
     alignItems: 'center',
     color: '#f9f6fb',
-    fontWeight: '200',
+    fontWeight: '200]
   },
   content: {
-    flex: 1,
+
     paddingTop: 30,
     backgroundColor: '#fff',
   },
