@@ -14,27 +14,27 @@ const SECTIONS = [
   {
     title: 'First',
     content: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Qui in tempore blanditiis maxime odio deleniti explicabo ipsa quidem pariatur quibusdam cum voluptate dolores, minima nesciunt harum molestias, nam quisquam facere.',
-    pic: require('./img/marvell/marvell-0'),
+    pic: require('./img/marvell/marvell-0.jpeg'),
   },
   {
     title: 'Second',
     content: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Qui in tempore blanditiis maxime odio deleniti explicabo ipsa quidem pariatur quibusdam cum voluptate dolores, minima nesciunt harum molestias, nam quisquam facere.',
-    pic: require('./img/marvell/marvell-1'),
+    pic: require('./img/marvell/marvell-1.jpeg'),
   },
   {
     title: 'Third',
     content: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Qui in tempore blanditiis maxime odio deleniti explicabo ipsa quidem pariatur quibusdam cum voluptate dolores, minima nesciunt harum molestias, nam quisquam facere.',
-    pic: require('./img/marvell/marvell-2'),
+    pic: require('./img/marvell/marvell-2.jpeg'),
   },
   {
     title: ' Fourth',
     content: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Qui in tempore blanditiis maxime odio deleniti explicabo ipsa quidem pariatur quibusdam cum voluptate dolores, minima nesciunt harum molestias, nam quisquam facere.',
-    pic: require('./img/marvell/marvell-3'),
+    pic: require('./img/marvell/marvell-3.jpeg'),
   },
   {
     title: 'Fifth',
     content: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Qui in tempore blanditiis maxime odio deleniti explicabo ipsa quidem pariatur quibusdam cum voluptate dolores, minima nesciunt harum molestias, nam quisquam facere.',
-    pic: require('./img/marvell/marvell-4'),
+    pic: require('./img/marvell/marvell-4.jpeg'),
   },
 ];
 
@@ -43,7 +43,7 @@ const SECTIONS = [
 class iSoulClub extends Component {
   _renderHeader(section) {
     return (
-        <Image style={styles.backgroundImage} source={{uri: section.pic}}><Text style={styles.headerText}>{section.title}</Text></Image>
+        <Image style={styles.backgroundImage} source={section.pic}><Text style={styles.headerText}>{section.title}</Text></Image>
     );
   }
 
@@ -69,13 +69,13 @@ class iSoulClub extends Component {
 const styles = StyleSheet.create({
   header: {
     flex: 1,
-    backgroundColor: '#1fa6df',
     padding: 30
   },
   headerText: {
     textAlign: 'center',
     fontSize: 30,
     alignItems: 'center',
+    color: '#f9f6fb',
     fontWeight: '500',
   },
   content: {
