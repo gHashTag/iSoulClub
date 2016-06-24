@@ -1,9 +1,3 @@
-/**
- * Sample React Native App
- * https://github.com/facebook/react-native
- * @flow
- */
-
 import React, { Component } from 'react';
 import {
   AppRegistry,
@@ -20,27 +14,27 @@ const SECTIONS = [
   {
     title: 'First',
     content: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Qui in tempore blanditiis maxime odio deleniti explicabo ipsa quidem pariatur quibusdam cum voluptate dolores, minima nesciunt harum molestias, nam quisquam facere.',
-    pic: './img/marvell/marvell-0',
+    pic: require('./img/marvell/marvell-0'),
   },
   {
     title: 'Second',
     content: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Qui in tempore blanditiis maxime odio deleniti explicabo ipsa quidem pariatur quibusdam cum voluptate dolores, minima nesciunt harum molestias, nam quisquam facere.',
-    pic: './img/marvell/marvell-1',
+    pic: require('./img/marvell/marvell-1'),
   },
   {
     title: 'Third',
     content: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Qui in tempore blanditiis maxime odio deleniti explicabo ipsa quidem pariatur quibusdam cum voluptate dolores, minima nesciunt harum molestias, nam quisquam facere.',
-    pic: './img/marvell/marvell-2',
+    pic: require('./img/marvell/marvell-2'),
   },
   {
     title: ' Fourth',
     content: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Qui in tempore blanditiis maxime odio deleniti explicabo ipsa quidem pariatur quibusdam cum voluptate dolores, minima nesciunt harum molestias, nam quisquam facere.',
-    pic: './img/marvell/marvell-3',
+    pic: require('./img/marvell/marvell-3'),
   },
   {
     title: 'Fifth',
     content: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Qui in tempore blanditiis maxime odio deleniti explicabo ipsa quidem pariatur quibusdam cum voluptate dolores, minima nesciunt harum molestias, nam quisquam facere.',
-    pic: './img/marvell/marvell-4',
+    pic: require('./img/marvell/marvell-4'),
   },
 ];
 
@@ -49,7 +43,7 @@ const SECTIONS = [
 class iSoulClub extends Component {
   _renderHeader(section) {
     return (
-        <Image style={styles.backgroundImage}>{section.pic}><Text style={styles.headerText}>{section.title}</Text></Image>
+        <Image style={styles.backgroundImage} source={{uri: section.pic}}><Text style={styles.headerText}>{section.title}</Text></Image>
     );
   }
 
