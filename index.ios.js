@@ -70,9 +70,9 @@ const SECTIONS = [
 class iSoulClub extends Component {
   _renderHeader(section) {
     return (
-        <View>
-          <Image style={styles.header} resizeMode='stretch' source={section.pic}><Text style={styles.headerText}>{section.title}</Text></Image>
-        </View>
+      <View style={styles.header}>
+        <Text style={styles.headerText}>{section.title}</Text>
+      </View>
     );
   }
 
@@ -98,24 +98,27 @@ class iSoulClub extends Component {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    paddingTop: 20,
-    //backgroundColor: 'orange'
+    paddingTop: 30,
+    backgroundColor: '#f4520f'
   },
   header: {
     flex: 1,
-    width: null,
-    //height: null,
-    //flexDirection: 'column',
-    //alignItems: 'stretch',
-    //backgroundColor: 'blue'
+    //width: null,
+    //padding: 10,
+    backgroundColor: '#f4520f'
   },
   headerText: {
     flex: 1,
     textAlign: 'center',
-    fontSize: 30,
+    fontSize: 27,
     color: '#f9f6fb',
-    fontWeight: '200',
-    paddingTop: 30,
+    fontWeight: '300',
+    alignItems: 'center',
+    paddingTop: 10,
+    paddingLeft: 10,
+    paddingRight: 10,
+    paddingBottom: 10,
+    fontFamily: "HelveticaNeue-CondensedBold",
     //backgroundColor: 'green'
   },
   textContent: {
