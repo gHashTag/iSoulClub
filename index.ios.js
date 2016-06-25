@@ -15,27 +15,52 @@ const { width, height } = Dimensions.get('window');
 
 const SECTIONS = [
   {
-    title: 'First',
+    title: 'РАСПИСАНИЕ',
     content: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Qui in tempore blanditiis maxime odio deleniti explicabo ipsa quidem pariatur quibusdam cum voluptate dolores, minima nesciunt harum molestias, nam quisquam facere.',
     pic: require('./img/marvell/marvell-0.jpeg'),
   },
   {
-    title: 'Second',
+    title: 'СОБЫТИЯ',
     content: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Qui in tempore blanditiis maxime odio deleniti explicabo ipsa quidem pariatur quibusdam cum voluptate dolores, minima nesciunt harum molestias, nam quisquam facere.',
     pic: require('./img/marvell/marvell-1.jpeg'),
   },
   {
-    title: 'Third',
+    title: 'О КЛУБЕ',
     content: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Qui in tempore blanditiis maxime odio deleniti explicabo ipsa quidem pariatur quibusdam cum voluptate dolores, minima nesciunt harum molestias, nam quisquam facere.',
     pic: require('./img/marvell/marvell-2.jpeg'),
   },
   {
-    title: ' Fourth',
+    title: 'МАСТЕРА',
     content: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Qui in tempore blanditiis maxime odio deleniti explicabo ipsa quidem pariatur quibusdam cum voluptate dolores, minima nesciunt harum molestias, nam quisquam facere.',
     pic: require('./img/marvell/marvell-3.jpeg'),
   },
   {
-    title: 'Fifth',
+    title: 'МЕНЮ КАФЕ',
+    content: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Qui in tempore blanditiis maxime odio deleniti explicabo ipsa quidem pariatur quibusdam cum voluptate dolores, minima nesciunt harum molestias, nam quisquam facere.',
+    pic: require('./img/marvell/marvell-4.jpeg'),
+  },
+  {
+    title: 'ПУТЕШЕСТВИЯ',
+    content: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Qui in tempore blanditiis maxime odio deleniti explicabo ipsa quidem pariatur quibusdam cum voluptate dolores, minima nesciunt harum molestias, nam quisquam facere.',
+    pic: require('./img/marvell/marvell-4.jpeg'),
+  },
+  {
+    title: 'ВИДЕО',
+    content: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Qui in tempore blanditiis maxime odio deleniti explicabo ipsa quidem pariatur quibusdam cum voluptate dolores, minima nesciunt harum molestias, nam quisquam facere.',
+    pic: require('./img/marvell/marvell-4.jpeg'),
+  },
+  {
+    title: 'БЛОГ',
+    content: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Qui in tempore blanditiis maxime odio deleniti explicabo ipsa quidem pariatur quibusdam cum voluptate dolores, minima nesciunt harum molestias, nam quisquam facere.',
+    pic: require('./img/marvell/marvell-4.jpeg'),
+  },
+  {
+    title: 'СОТРУДНИЧЕСТВО',
+    content: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Qui in tempore blanditiis maxime odio deleniti explicabo ipsa quidem pariatur quibusdam cum voluptate dolores, minima nesciunt harum molestias, nam quisquam facere.',
+    pic: require('./img/marvell/marvell-4.jpeg'),
+  },
+  {
+    title: 'ЦЕНЫ',
     content: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Qui in tempore blanditiis maxime odio deleniti explicabo ipsa quidem pariatur quibusdam cum voluptate dolores, minima nesciunt harum molestias, nam quisquam facere.',
     pic: require('./img/marvell/marvell-4.jpeg'),
   },
@@ -46,7 +71,7 @@ class iSoulClub extends Component {
   _renderHeader(section) {
     return (
         <View>
-          <Image style={styles.header} style={{flex: 1}} resizeMode='stretch' source={section.pic}><Text style={styles.headerText}>{section.title}</Text></Image>
+          <Image style={styles.header} resizeMode='stretch' source={section.pic}><Text style={styles.headerText}>{section.title}</Text></Image>
         </View>
     );
   }
@@ -73,14 +98,14 @@ class iSoulClub extends Component {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    paddingTop: 30,
-    backgroundColor: 'orange'
+    paddingTop: 20,
+    //backgroundColor: 'orange'
   },
   header: {
     flex: 1,
     width: null,
     //height: null,
-    flexDirection: 'column',
+    //flexDirection: 'column',
     //alignItems: 'stretch',
     //backgroundColor: 'blue'
   },
@@ -88,9 +113,10 @@ const styles = StyleSheet.create({
     flex: 1,
     textAlign: 'center',
     fontSize: 30,
-    alignItems: 'center',
     color: '#f9f6fb',
-    fontWeight: '200'
+    fontWeight: '200',
+    paddingTop: 30,
+    //backgroundColor: 'green'
   },
   textContent: {
     paddingTop: 10,
