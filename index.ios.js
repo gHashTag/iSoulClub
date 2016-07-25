@@ -31,8 +31,20 @@ const SECTIONS = [
   },
   {
     title: 'МАСТЕРА',
-    content: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Qui in tempore blanditiis maxime odio deleniti explicabo ipsa quidem pariatur quibusdam cum voluptate dolores, minima nesciunt harum molestias, nam quisquam facere.',
-    pic: require('./img/marvell/marvell-3.jpeg'),
+    masters: [
+      {
+        name: 'АЛЕКСАНДР БРАТЕЦКИЙ',
+        bio: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Qui in tempore blanditiis maxime odio deleniti explicabo ipsa quidem pariatur quibusdam cum voluptate dolores, minima nesciunt harum molestias, nam quisquam facere.',
+      },
+      {
+        name: 'АЛСУ МУБАРАШКИНА',
+        bio: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Qui in tempore blanditiis maxime odio deleniti explicabo ipsa quidem pariatur quibusdam cum voluptate dolores, minima nesciunt harum molestias, nam quisquam facere.',
+      },
+      {
+        name: 'ИРИНА ТОЛСТОГУЗОВА',
+        bio: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Qui in tempore blanditiis maxime odio deleniti explicabo ipsa quidem pariatur quibusdam cum voluptate dolores, minima nesciunt harum molestias, nam quisquam facere.',
+      },
+    ]
   },
   {
     title: 'МЕНЮ КАФЕ',
@@ -67,6 +79,7 @@ const SECTIONS = [
 ];
 
 
+
 class iSoulClub extends Component {
   _renderHeader(section) {
     return (
@@ -94,6 +107,8 @@ class iSoulClub extends Component {
     );
   }
 }
+
+
 
 const styles = StyleSheet.create({
   container: {
@@ -126,7 +141,7 @@ const styles = StyleSheet.create({
     paddingLeft: 10,
     paddingRight: 10,
     paddingBottom: 10,
-    backgroundColor: 'red'
+    backgroundColor: '#f26c2a'
   }
 });
 
